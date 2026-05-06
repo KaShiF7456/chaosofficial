@@ -440,6 +440,21 @@ footer{position:relative;z-index:2;background:rgba(0,0,0,0.6);border-top:1px sol
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .65s ease,transform .65s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
 
+/* ══ LAZY IMAGE PLACEHOLDERS ══ */
+img[loading="lazy"]{
+  background: linear-gradient(90deg, rgba(40,0,0,0.6) 25%, rgba(80,0,0,0.4) 50%, rgba(40,0,0,0.6) 75%);
+  background-size: 200% 100%;
+  animation: imgShimmer 1.6s ease-in-out infinite;
+}
+img[loading="lazy"].loaded{
+  background: none;
+  animation: none;
+}
+@keyframes imgShimmer{
+  0%{background-position:200% 0;}
+  100%{background-position:-200% 0;}
+}
+
 /* ══════════════════════════════════════════
    RESPONSIVE — TABLET (≤900px)
 ══════════════════════════════════════════ */
@@ -511,7 +526,7 @@ footer{position:relative;z-index:2;background:rgba(0,0,0,0.6);border-top:1px sol
 <!-- ══ NAV ══ -->
 <nav>
   <a href="#home" class="nav-logo">
-    <img class="nav-logo-img"
+    <img decoding="async" class="nav-logo-img"
       src="chaoslogo.png"
       alt="Chaos Logo" onerror="this.style.display='none'">
     CHAOS
@@ -552,7 +567,7 @@ footer{position:relative;z-index:2;background:rgba(0,0,0,0.6);border-top:1px sol
 <section id="home">
   <div class="home-inner">
     <div class="logo-3d-wrap">
-      <img class="logo-3d-img"
+      <img decoding="async" class="logo-3d-img"
         src="chaoslogo.png"
         alt="Chaos Gang Logo" onerror="this.style.display='none'">
       <div class="ring ring-1"></div>
@@ -621,7 +636,7 @@ footer{position:relative;z-index:2;background:rgba(0,0,0,0.6);border-top:1px sol
 
     <div class="member-card reveal">
       <div class="member-skull" style="overflow:hidden;display:flex;align-items:center;justify-content:center;">
-        <img src="Kashif.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;">
+        <img decoding="async" loading="lazy" src="Kashif.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;">
       </div>
       <div class="member-name">KASHIF</div>
       <div class="member-rank">Founder</div>
@@ -629,7 +644,7 @@ footer{position:relative;z-index:2;background:rgba(0,0,0,0.6);border-top:1px sol
 
     <div class="member-card reveal" style="transition-delay:.08s;">
       <div class="member-skull" style="overflow:hidden;display:flex;align-items:center;justify-content:center;">
-        <img src="Hassaan.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;">
+        <img decoding="async" loading="lazy" src="Hassaan.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;">
       </div>
       <div class="member-name">Hassaan</div>
       <div class="member-rank">Founder</div>
@@ -637,7 +652,7 @@ footer{position:relative;z-index:2;background:rgba(0,0,0,0.6);border-top:1px sol
 	
 	    <div class="member-card reveal">
       <div class="member-skull" style="overflow:hidden;display:flex;align-items:center;justify-content:center;">
-        <img src="Sammandar.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;">
+        <img decoding="async" loading="lazy" src="Sammandar.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;">
       </div>
       <div class="member-name">Sammandar</div>
       <div class="member-rank">Founder</div>
@@ -645,7 +660,7 @@ footer{position:relative;z-index:2;background:rgba(0,0,0,0.6);border-top:1px sol
 	
 		    <div class="member-card reveal">
       <div class="member-skull" style="overflow:hidden;display:flex;align-items:center;justify-content:center;">
-        <img src="Reaper.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;">
+        <img decoding="async" loading="lazy" src="Reaper.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;">
       </div>
       <div class="member-name">Reaper</div>
       <div class="member-rank">Founder</div>
@@ -653,7 +668,7 @@ footer{position:relative;z-index:2;background:rgba(0,0,0,0.6);border-top:1px sol
 	
 			    <div class="member-card reveal">
       <div class="member-skull" style="overflow:hidden;display:flex;align-items:center;justify-content:center;">
-        <img src="Dab.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;">
+        <img decoding="async" loading="lazy" src="Dab.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;">
       </div>
       <div class="member-name">Dab</div>
       <div class="member-rank">Founder</div>
@@ -661,7 +676,7 @@ footer{position:relative;z-index:2;background:rgba(0,0,0,0.6);border-top:1px sol
 	
 			    <div class="member-card reveal">
       <div class="member-skull" style="overflow:hidden;display:flex;align-items:center;justify-content:center;">
-        <img src="Lala.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;">
+        <img decoding="async" loading="lazy" src="Lala.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;">
       </div>
       <div class="member-name">Lala</div>
       <div class="member-rank">Founder</div>
@@ -673,31 +688,31 @@ footer{position:relative;z-index:2;background:rgba(0,0,0,0.6);border-top:1px sol
   <div class="members-grid" style="margin-bottom:0;">
 
     <div class="member-card reveal">
-      <div class="member-skull"><img src="Awais.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Awais.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);"></div>
       <div class="member-name">Awais</div>
       <div class="member-rank">Leader</div>
     </div>
 
     <div class="member-card reveal" style="transition-delay:.08s;">
-      <div class="member-skull"><img src="Smokey.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Smokey.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);"></div>
       <div class="member-name">Smokey</div>
       <div class="member-rank">Leader</div>
     </div>
 
     <div class="member-card reveal" style="transition-delay:.16s;">
-      <div class="member-skull"><img src="Areeb.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Areeb.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);"></div>
       <div class="member-name">AreeB</div>
       <div class="member-rank">Leader</div>
     </div>
 
     <div class="member-card reveal" style="transition-delay:.24s;">
-      <div class="member-skull"><img src="Heisenberg.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Heisenberg.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
       <div class="member-name">Heisenberg</div>
       <div class="member-rank">Leader</div>
     </div>
 
     <div class="member-card reveal" style="transition-delay:.32s;">
-      <div class="member-skull"><img src="Ayush.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Ayush.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
       <div class="member-name">Ayush</div>
       <div class="member-rank">Leader</div>
     </div>
@@ -708,13 +723,13 @@ footer{position:relative;z-index:2;background:rgba(0,0,0,0.6);border-top:1px sol
   <div class="members-grid" style="margin-bottom:0;">
 
     <div class="member-card reveal">
-      <div class="member-skull"><img src="Hino.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Hino.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);"></div>
       <div class="member-name">Hino</div>
       <div class="member-rank">Co-Leader</div>
     </div>
 
     <div class="member-card reveal" style="transition-delay:.08s;">
-      <div class="member-skull"><img src="Beast.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Beast.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);"></div>
       <div class="member-name">Beast</div>
       <div class="member-rank">Co-Leader</div>
     </div>
@@ -725,31 +740,31 @@ footer{position:relative;z-index:2;background:rgba(0,0,0,0.6);border-top:1px sol
   <div class="members-grid" style="margin-bottom:0;">
 
     <div class="member-card reveal">
-      <div class="member-skull"><img src="Night Mare.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Night Mare.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);"></div>
       <div class="member-name">Night Mare</div>
       <div class="member-rank">Senior</div>
     </div>
 
     <div class="member-card reveal" style="transition-delay:.16s;">
-      <div class="member-skull"><img src="Buxy.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Buxy.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);"></div>
       <div class="member-name">Buxy</div>
       <div class="member-rank">Senior</div>
     </div>
 
     <div class="member-card reveal" style="transition-delay:.24s;">
-      <div class="member-skull"><img src="Shayan.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Shayan.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
       <div class="member-name">Shayan</div>
       <div class="member-rank">Senior</div>
     </div>
 
     <div class="member-card reveal" style="transition-delay:.32s;">
-      <div class="member-skull"><img src="Zack.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Zack.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
       <div class="member-name">Zack</div>
       <div class="member-rank">Senior</div>
     </div>
 
     <div class="member-card reveal" style="transition-delay:.40s;">
-      <div class="member-skull"><img src="Umerisin.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Umerisin.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
       <div class="member-name">Umerisin</div>
       <div class="member-rank">Senior</div>
     </div>
@@ -759,19 +774,19 @@ footer{position:relative;z-index:2;background:rgba(0,0,0,0.6);border-top:1px sol
   <div class="sec-label">💀 OG</div>
   <div class="members-grid" style="margin-bottom:0;">
     <div class="member-card reveal">
-      <div class="member-skull"><img src="Zoro.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Zoro.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);"></div>
       <div class="member-name">Zoro Don</div>
       <div class="member-rank">OG</div>
     </div>
 
     <div class="member-card reveal" style="transition-delay:.08s;">
-      <div class="member-skull"><img src="Shroud.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Shroud.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
       <div class="member-name">Shroud</div>
       <div class="member-rank">OG</div>
     </div>
 
     <div class="member-card reveal" style="transition-delay:.16s;">
-      <div class="member-skull"><img src="Biscuit.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Biscuit.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
       <div class="member-name">Biscuit</div>
       <div class="member-rank">OG</div>
     </div>
@@ -782,19 +797,19 @@ footer{position:relative;z-index:2;background:rgba(0,0,0,0.6);border-top:1px sol
   <div class="members-grid retired-grid" style="margin-bottom:0;">
 
     <div class="member-card reveal" style="opacity:.72;">
-      <div class="member-skull"><img src="Solid Snake.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Solid Snake.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
       <div class="member-name">Solid Snake</div>
       <div class="member-rank retired-rank">Leader · Retired</div>
     </div>
 
     <div class="member-card reveal" style="opacity:.72;">
-      <div class="member-skull"><img src="Ammar.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Ammar.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
       <div class="member-name">Ammar</div>
       <div class="member-rank retired-rank">Leader · Retired</div>
     </div>
 
     <div class="member-card reveal" style="opacity:.72;">
-      <div class="member-skull"><img src="Priyanshu.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Priyanshu.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
       <div class="member-name">Priyanshu</div>
       <div class="member-rank retired-rank">Leader · Retired</div>
     </div>
@@ -802,55 +817,55 @@ footer{position:relative;z-index:2;background:rgba(0,0,0,0.6);border-top:1px sol
 
 	
 		    <div class="member-card reveal" style="opacity:.72;">
-      <div class="member-skull-wrap"><span class="crown-badge">👑</span><div class="member-skull"><img src="Sendow.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div></div>
+      <div class="member-skull-wrap"><span class="crown-badge">👑</span><div class="member-skull"><img decoding="async" loading="lazy" src="Sendow.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div></div>
       <div class="member-name">Sendow</div>
       <div class="member-rank retired-rank">Founder · Retired</div>
     </div>
 	
 			    <div class="member-card reveal" style="opacity:.72;">
-      <div class="member-skull-wrap"><span class="crown-badge">👑</span><div class="member-skull"><img src="Gullu Butt.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div></div>
+      <div class="member-skull-wrap"><span class="crown-badge">👑</span><div class="member-skull"><img decoding="async" loading="lazy" src="Gullu Butt.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div></div>
       <div class="member-name">Gullu Butt</div>
       <div class="member-rank retired-rank">Founder · Retired</div>
     </div>
 	
 				    <div class="member-card reveal" style="opacity:.72;">
-      <div class="member-skull-wrap"><span class="crown-badge">👑</span><div class="member-skull"><img src="Samfisher.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div></div>
+      <div class="member-skull-wrap"><span class="crown-badge">👑</span><div class="member-skull"><img decoding="async" loading="lazy" src="Samfisher.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div></div>
       <div class="member-name">Samfisher</div>
       <div class="member-rank retired-rank">Founder · Retired</div>
     </div>
 	
 					    <div class="member-card reveal" style="opacity:.72;">
-      <div class="member-skull-wrap"><span class="crown-badge">👑</span><div class="member-skull"><img src="Aleeminati.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div></div>
+      <div class="member-skull-wrap"><span class="crown-badge">👑</span><div class="member-skull"><img decoding="async" loading="lazy" src="Aleeminati.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div></div>
       <div class="member-name">Aleeminati</div>
       <div class="member-rank retired-rank">Founder · Retired</div>
     </div>
 	
 						    <div class="member-card reveal" style="opacity:.72;">
-      <div class="member-skull-wrap"><span class="crown-badge">👑</span><div class="member-skull"><img src="Kaify.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div></div>
+      <div class="member-skull-wrap"><span class="crown-badge">👑</span><div class="member-skull"><img decoding="async" loading="lazy" src="Kaify.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div></div>
       <div class="member-name">Kaify</div>
       <div class="member-rank retired-rank">Founder · Retired</div>
     </div>
 
     <div class="member-card reveal" style="opacity:.72;">
-      <div class="member-skull"><img src="Mafia.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Mafia.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
       <div class="member-name">Mafia</div>
       <div class="member-rank retired-rank">Leader · Retired</div>
     </div>
 
     <div class="member-card reveal" style="opacity:.72;">
-      <div class="member-skull"><img src="Nomi.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Nomi.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
       <div class="member-name">Nomi</div>
       <div class="member-rank retired-rank">Leader · Retired</div>
     </div>
 
     <div class="member-card reveal" style="opacity:.72;">
-      <div class="member-skull"><img src="Sharp Shooter.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Sharp Shooter.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
       <div class="member-name">Sharp Shooter</div>
       <div class="member-rank retired-rank">Senior · Retired</div>
     </div>
 
     <div class="member-card reveal" style="opacity:.72;">
-      <div class="member-skull"><img src="Molana Santa.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
+      <div class="member-skull"><img decoding="async" loading="lazy" src="Molana Santa.png" style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;transform:scale(2.2);transform-origin:center 30%;"></div>
       <div class="member-name">Molana Santa</div>
       <div class="member-rank retired-rank">Senior · Retired</div>
     </div>
@@ -881,39 +896,39 @@ footer{position:relative;z-index:2;background:rgba(0,0,0,0.6);border-top:1px sol
   <div class="sec-sub">Moments of Mayhem</div>
   <div class="gallery-grid">
     <div class="gallery-item wide reveal" data-src="CHAOS CREW.png">
-      <img src="CHAOS CREW.png" alt="Chaos Crew" loading="lazy">
+      <img decoding="async" src="CHAOS CREW.png" alt="Chaos Crew" loading="lazy">
       <div class="gallery-overlay"><span>CHAOS CREW</span></div>
     </div>
     <div class="gallery-item reveal" style="transition-delay:.07s;" data-src="GANG LIFE.png">
-      <img src="GANG LIFE.png" alt="Gang Life" loading="lazy">
+      <img decoding="async" src="GANG LIFE.png" alt="Gang Life" loading="lazy">
       <div class="gallery-overlay"><span>GANG LIFE</span></div>
     </div>
     <div class="gallery-item reveal" style="transition-delay:.1s;" data-src="TERRITORY.png">
-      <img src="TERRITORY.png" alt="Territory" loading="lazy">
+      <img decoding="async" src="TERRITORY.png" alt="Territory" loading="lazy">
       <div class="gallery-overlay"><span>TERRITORY</span></div>
     </div>
     <div class="gallery-item reveal" style="transition-delay:.13s;" data-src="OPERATIONS.png">
-      <img src="OPERATIONS.png" alt="Operations" loading="lazy">
+      <img decoding="async" src="OPERATIONS.png" alt="Operations" loading="lazy">
       <div class="gallery-overlay"><span>OPERATIONS</span></div>
     </div>
     <div class="gallery-item wide reveal" style="transition-delay:.16s;" data-src="STREET CONTROL.png">
-      <img src="STREET CONTROL.png" alt="Street Control" loading="lazy">
+      <img decoding="async" src="STREET CONTROL.png" alt="Street Control" loading="lazy">
       <div class="gallery-overlay"><span>STREET CONTROL</span></div>
     </div>
     <div class="gallery-item reveal" style="transition-delay:.19s;" data-src="37962&THE SQUAD.png">
-      <img src="THE SQUAD.png" alt="The Squad" loading="lazy">
+      <img decoding="async" src="THE SQUAD.png" alt="The Squad" loading="lazy">
       <div class="gallery-overlay"><span>THE SQUAD</span></div>
     </div>
     <div class="gallery-item reveal" style="transition-delay:.22s;" data-src="CHAOS REIGNS.png">
-      <img src="CHAOS REIGNS.png" alt="Chaos Reigns" loading="lazy">
+      <img decoding="async" src="CHAOS REIGNS.png" alt="Chaos Reigns" loading="lazy">
       <div class="gallery-overlay"><span>CHAOS REIGNS</span></div>
     </div>
     <div class="gallery-item reveal" style="transition-delay:.22s;" data-src="GANG MEETUP.png">
-      <img src="GANG MEETUP.png" alt="Chaos Gang Crew" loading="lazy">
+      <img decoding="async" src="GANG MEETUP.png" alt="Chaos Gang Crew" loading="lazy">
       <div class="gallery-overlay"><span>GANG MEETUP</span></div>
     </div>
     <div class="gallery-item reveal" style="transition-delay:.26s;" data-src="IN ACTION.png">
-      <img src="IN ACTION.png" alt="Chaos Gang Action" loading="lazy">
+      <img decoding="async" src="IN ACTION.png" alt="Chaos Gang Action" loading="lazy">
       <div class="gallery-overlay"><span>IN ACTION</span></div>
     </div>
   </div>
@@ -922,7 +937,7 @@ footer{position:relative;z-index:2;background:rgba(0,0,0,0.6);border-top:1px sol
 <div id="lightbox">
   <span class="lb-close" id="lbClose">✕ CLOSE</span>
   <span class="lb-nav lb-prev" id="lbPrev">&#8592;</span>
-  <img id="lbImg" src="" alt="Gallery">
+  <img decoding="async" loading="lazy" id="lbImg" src="" alt="Gallery">
   <span class="lb-nav lb-next" id="lbNext">&#8594;</span>
 </div>
 
@@ -1007,8 +1022,14 @@ if(skull3d&&window.innerWidth>900){
 }
 
 /* ══ SCROLL REVEAL ══ */
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:.07});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:.07,rootMargin:'0px 0px 100px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+/* ══ LAZY IMAGE — remove shimmer once loaded ══ */
+document.querySelectorAll('img[loading="lazy"]').forEach(img=>{
+  if(img.complete){img.classList.add('loaded');}
+  else{img.addEventListener('load',()=>img.classList.add('loaded'),{once:true});}
+});
 
 /* ══ NAV ACTIVE ══ */
 const secs=document.querySelectorAll('section');
